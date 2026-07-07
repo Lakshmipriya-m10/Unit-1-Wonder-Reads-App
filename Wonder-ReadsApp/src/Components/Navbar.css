@@ -77,7 +77,7 @@ nav .hamburger span {
     background-color: white;
     border-radius: 0.2rem;
 }
-
+/* Responsive grid for tablets and phones */
 @media (max-width: 480px) {
     nav .hamburger {
         display: flex;

@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@400;500;600&display=swap');
 
+/*Style for all components */
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Comic Neue", cursive;
 }
-
+/* change cursor point */
 button {
   cursor: pointer;
 }
@@ -20,4 +21,72 @@ h1, h2, h3 {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff8e7;
+  color: #3b2f2f;
+  line-height: 1.6;
+}
+
+/* using clamp() for header */
+
+h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+}
+/*   FLEXBOX / LAYOUT HELPERS */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+
+
+/* Common flex layout */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Common grid layout */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+  .grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    width: 95%;
+  }
+
 }
