@@ -8,7 +8,7 @@ const Navbar = () => {
   const [hamburgerOpen, sethamburgerOpen] = useState(false);
   return (
     <nav>
-      <Link to="/" className="title">Home</Link>
+      <Link to="/" className="title">Wonder Reads</Link>
       <div className="hamburger" onClick={() => {
         sethamburgerOpen(!hamburgerOpen);
       }}

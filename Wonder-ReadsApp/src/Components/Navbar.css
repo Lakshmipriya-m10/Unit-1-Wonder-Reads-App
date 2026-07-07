@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -10,11 +12,17 @@ nav {
 }
 
 nav .title {
-    font-size: x-large;
+
     margin: 1rem;
     font-weight: bold;
     text-decoration: none;
-    color: White;
+
+    font-family: "Cinzel", serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: gold;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 10px rgb(218, 175, 175);
 
 }
 
@@ -94,4 +102,5 @@ nav .hamburger span {
     nav ul li a {
         margin: 0.2rem 0.5rem;
     }
+
 }

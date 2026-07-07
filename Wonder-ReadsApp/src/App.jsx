@@ -19,7 +19,6 @@ function App() {
         <Route path="/StoryForm" element={<StoryForm />} />
         <Route path="/MiniGames" element={<MiniGames />} />
       </Routes>
-      <h1>Hello!LaunchCode</h1>
     </div>
   );
 }
