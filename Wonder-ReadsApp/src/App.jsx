@@ -1,5 +1,15 @@
 import { useState } from 'react';
 import './App.css';
+import Footer from './components/Footer';
+function App() {
+  return (
+      <div className='container'>
+        <h1>Hello!LaunchCode</h1>
+      
+        <Footer />
+        
+      </div>
+     )
 import Navbar from './Components/Navbar';
 import { Route, Routes } from 'react-router-dom';
 import Home from "./Components/pages/Home.jsx"
