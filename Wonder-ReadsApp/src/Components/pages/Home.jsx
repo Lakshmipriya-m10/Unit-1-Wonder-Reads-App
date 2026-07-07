@@ -1,6 +1,6 @@
 import React from 'react';
 import '../design/home.css';
-import waterfalls from "../../assets/waterfalls.mp4";
+//import waterfalls from "../../assets/waterfalls.mp4";
 const Home = () => {
   return (
 

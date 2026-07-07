@@ -3,7 +3,7 @@ import React from 'react';
 const StoryForm = () => {
   return (
     <div>
-      StoryForm
+      <h2>StoryForm</h2>
     </div>
   )
 }
