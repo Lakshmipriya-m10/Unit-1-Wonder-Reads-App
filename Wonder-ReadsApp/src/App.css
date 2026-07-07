@@ -1,33 +1,4 @@
-body {
-  margin: 0;
-  text-align: center;
-  background-color: antiquewhite;
-  font-family: Arial, sans-serif;
-}
-
-html,
-body,
-#root {
-  height: 100%;
-}
-
 h1 {
-  padding: 20px;
-}
-
-.app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.content {
-  flex: 1;
-}
-/*.container {
-  display: flex;
-  justify-content: center;
+  padding: 25px;
   align-items: center;
-  min-height: 100vh;
-  flex: 1;  
-*/
+}
