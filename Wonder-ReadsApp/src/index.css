@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comic Neue", cursive;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1, h2, h3 {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  color: #5b2c6f;
+}
 .app {
   min-height: 100vh;
   display: flex;

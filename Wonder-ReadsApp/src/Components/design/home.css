@@ -40,6 +40,5 @@
     height: 100%;
     background: rgb(151, 129, 129);
     opacity: 0.9;
-    /* 👈 change this */
     z-index: -1;
 }

@@ -59,6 +59,7 @@ nav ul li a.active {
 }
 
 nav .hamburger {
+    cursor: pointer;
     display: none;
     flex-direction: column;
     justify-content: space-between;
