@@ -1,7 +1,7 @@
 .footer {
   background-color: #333;
   color: white;
-  padding: 20px;
+  padding: 10%;
   text-align: center;
 }
 
@@ -11,13 +11,13 @@
 
 .social-icons a {
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   margin: 0 15px;
   text-decoration: none;
   transition: transform 0.3s, color 0.3s;
 }
 
 .social-icons a:hover {
-  color: #f39c12;
+  color: #12ecf3;
   transform: scale(1.2);
 }
