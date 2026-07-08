@@ -13,7 +13,7 @@ const readingLevels = [
     title: "Reading Level 2",
     lexile: "200L-400L",
     grade: "2",
-    link: "/cardPage",
+    link: "/Level2",
   },
   {
     image:
