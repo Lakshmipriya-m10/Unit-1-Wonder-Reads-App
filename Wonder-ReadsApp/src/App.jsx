@@ -10,6 +10,7 @@ import Reading from "./Components/pages/Reading.jsx";
 import StoryForm from "./Components/pages/StoryForm.jsx";
 import MiniGames from "./Components/pages/MiniGames.jsx";
 
+
 function App() {
   return (
     <div className="container">
@@ -22,7 +23,7 @@ function App() {
         <Route path="/StoryForm" element={<StoryForm />} />
         <Route path="/MiniGames" element={<MiniGames />} />
       </Routes>
-
+      
       <Footer />
     </div>
   );
