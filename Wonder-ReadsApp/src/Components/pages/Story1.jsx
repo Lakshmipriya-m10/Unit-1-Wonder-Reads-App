@@ -42,7 +42,12 @@ const Story1 = () => {
   window.speechSynthesis.resume();
 };
   return (
-    <div className="story-page">
+    <div className="story-page" style={{
+    backgroundImage: "url('https://res.cloudinary.com/o7vbtffn/image/upload/v1783625039/book2_bxweas.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    minHeight: "100vh"
+  }}>
       <h2>Select a Story</h2>
 
       <select value={selectedStory} onChange={handleStoryChange}>
@@ -72,35 +77,25 @@ const Story1 = () => {
         </SwiperSlide>
       ))}
     </Swiper>
-
-
-
-
-
-
-
-
-
-
-
           <h2>{storyData.title}</h2>
           <p>{storyData.text}</p>
-
-          <button onClick={readStory}>
+          <div className="button-group">
+          <button className="button" onClick={readStory}>
             🔊 Read Story
           </button>
 
-          <button onClick={stopReading}>
+          <button className="button" onClick={stopReading}>
             Stop
           </button>
 
-          <button onClick={pauseReading}>
+          <button className="button" onClick={pauseReading}>
             Pause
           </button>
 
-           <button onClick={resumeReading}>
+           <button className="button" onClick={resumeReading}>
             Resume
           </button>
+           </div>
         </div>
       )}
     </div>

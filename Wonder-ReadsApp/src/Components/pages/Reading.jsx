@@ -6,6 +6,7 @@ const Reading = ({ image, title, lexile, grade, link }) => {
     if (!title) return null;
   return (
     <div className='card-container'>
+      
       <img src={image} alt={title} className="card-img" />
        
       <h4 className="title">Title:{title}</h4>

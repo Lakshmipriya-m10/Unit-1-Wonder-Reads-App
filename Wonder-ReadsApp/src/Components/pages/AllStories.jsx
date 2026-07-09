@@ -15,7 +15,7 @@ const AllStories = () => {
     const navigate = useNavigate();
     return (
         <div>
-            <h2>Stories</h2>  
+            <h2 className='card' >Stories</h2>  
             <Swiper
                 // install Swiper modules
                 modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
@@ -68,7 +68,7 @@ const AllStories = () => {
                     />
                 </SwiperSlide>
             </Swiper>
-           <button onClick={() => navigate("/Story1")}>
+           <button className="button" onClick={() => navigate("/Story1")}>
             Go to Story
             </button>
         </div>
