@@ -6,10 +6,10 @@ const Home = () => {
 
     <div className="home-page">
       <video autoPlay muted loop className="bg-video">
-        <source src="../src/assets/waterfalls.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/o7vbtffn/video/upload/v1783615682/waterfalls_xh0ctz.mp4" />
       </video>
-      <h1>Welcome to Wonder Reads-App</h1>
-      <p><strong>Explore Magical Stories And Books!</strong></p>
+      <h1 className='greeting'>Welcome to Wonder Reads-App</h1><br></br>
+      <p classname='message'><strong>Explore Magical Stories And Books!</strong></p>
     </div>
   )
 }

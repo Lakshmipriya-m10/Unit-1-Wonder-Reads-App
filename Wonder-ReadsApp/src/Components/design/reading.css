@@ -1,3 +1,12 @@
+body {
+  background-image: url("https://res.cloudinary.com/o7vbtffn/image/upload/v1783622775/copy_of_bga_vryrvb.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+
 .card-container {
     width: 350px;
     border-radius: 1rem;
@@ -14,6 +23,11 @@
     height: 200px;
     object-fit: cover;
     border-radius: 15px;
+}
+
+.card-container:hover {
+  transform: translateY(-20px);
+
 }
 
 .card-title {

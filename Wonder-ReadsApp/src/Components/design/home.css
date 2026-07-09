@@ -1,9 +1,11 @@
+
 .home-page p {
     text-align: center;
     background-image: url("");
     color: burlywood;
     padding: 0.1rem;
     font-size: large;
+    
 }
 
 .home-page h1 {
@@ -14,6 +16,10 @@
     /* moves text down */
     color: aquamarine;
 }
+ .greeting {
+    padding: 40px;
+ }
+
 
 .app {
     position: relative;

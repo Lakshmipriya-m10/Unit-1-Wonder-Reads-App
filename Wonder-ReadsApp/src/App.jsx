@@ -12,6 +12,7 @@ import MiniGames from "./Components/pages/MiniGames.jsx";
 import ReadingCards from './Components/pages/ReadingCard.jsx';
 import AllStories from './Components/pages/AllStories.jsx';
 import Story1 from './Components/pages/Story1.jsx';
+import Quiz from './Components/pages/Quiz.jsx';
 
 
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/About" element={<About />} />
         <Route path="/Reading" element={<ReadingCards />} />
+        <Route path="/Quiz" element={<Quiz />} />
         <Route path="/StoryForm" element={<StoryForm />} />
         <Route path="/MiniGames" element={<MiniGames />} />
         <Route path="/AllStories" element={<AllStories />} />

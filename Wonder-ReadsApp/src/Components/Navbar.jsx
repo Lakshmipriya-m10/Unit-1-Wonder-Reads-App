@@ -20,6 +20,7 @@ const Navbar = () => {
       <ul className={hamburgerOpen ? "open" : ""}>
         <li><NavLink to="/About">About</NavLink></li>
         <li><NavLink to="/Reading">Reading</NavLink></li>
+        <li><NavLink to="/Quiz">Quiz</NavLink></li>
         <li><NavLink to="/StoryForm">StoryForm</NavLink></li>
         <li><NavLink to="/MiniGames">MiniGames</NavLink></li>
       </ul>
