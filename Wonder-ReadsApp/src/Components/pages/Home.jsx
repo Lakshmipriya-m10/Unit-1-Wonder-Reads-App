@@ -9,7 +9,7 @@ const Home = () => {
         <source src="https://res.cloudinary.com/o7vbtffn/video/upload/v1783615682/waterfalls_xh0ctz.mp4" />
       </video>
       <h1 className='greeting'>Welcome to Wonder Reads-App</h1><br></br>
-      <p classname='message'><strong>Explore Magical Stories And Books!</strong></p>
+      <p className='message'><strong>Explore Magical Stories And Books!</strong></p>
     </div>
   )
 }
