@@ -3,8 +3,13 @@ const stories = [
     id: "mia-cat",
     title: "Mia and the Cat",
     text: 
-    "Mia is a small girl. She sees a cat in her yard. The cat is black. It is tiny. “Hello, cat,” Mia says. The cat walks to Mia. It says, “Meow!”Mia smiles. She gives the cat milk. The cat drinks the milk. The cat is happy. Mia is happy too. Every day, the cat comes back. Mia and the cat are friends."
-  },
+    "Mia is a small girl. She sees a cat in her yard. The cat is black. It is tiny. “Hello, cat,” Mia says. The cat walks to Mia. It says, “Meow!”Mia smiles. She gives the cat milk. The cat drinks the milk. The cat is happy. Mia is happy too. Every day, the cat comes back. Mia and the cat are friends.",
+    images: [
+      "https://res.cloudinary.com/o7vbtffn/image/upload/v1783560914/s1-1_pypik8.png",
+      "https://res.cloudinary.com/o7vbtffn/image/upload/v1783560915/s1-2_hxpmaq.png",
+      "https://res.cloudinary.com/o7vbtffn/image/upload/v1783560915/s1-4_lg1lzn.png"
+    ]
+ },
   {
     id: "magic-forest",
     title: "A Girl in the Magic Forest",

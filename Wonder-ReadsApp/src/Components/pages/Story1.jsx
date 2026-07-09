@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import stories from "../data/stories";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 const Story1 = () => {
   const [selectedStory, setSelectedStory] = useState("");
@@ -51,9 +56,34 @@ const Story1 = () => {
       </select>
 
       {storyData && (
-        <div className="story-content">
-          <h2>{storyData.title}</h2>
+        <div className="story-content" >
+         <Swiper
+      modules={[Pagination]}
+      pagination={{ clickable: true }}
+      slidesPerView={1}
+    >
+      {storyData.images.map((img, index) => (
+        <SwiperSlide key={index}>
+          <img
+            src={img}
+            alt={storyData.title}
+            width="65%"
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
 
+
+
+
+
+
+
+
+
+
+
+          <h2>{storyData.title}</h2>
           <p>{storyData.text}</p>
 
           <button onClick={readStory}>
