@@ -11,7 +11,7 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/effect-fade';
 
 
-const Level1 = () => {
+const AllStories = () => {
     const navigate = useNavigate();
     return (
         <div>
@@ -76,4 +76,4 @@ const Level1 = () => {
     )
 }
 
-export default Level1
+export default AllStories
