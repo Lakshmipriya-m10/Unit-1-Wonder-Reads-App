@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 // import Swiper core and required modules
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y, EffectFade } from 'swiper/modules';
@@ -11,9 +12,10 @@ import 'swiper/css/effect-fade';
 
 
 const Level1 = () => {
+    const navigate = useNavigate();
     return (
         <div>
-            <h2>Stories</h2>
+            <h2>Stories</h2>  
             <Swiper
                 // install Swiper modules
                 modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
@@ -25,12 +27,16 @@ const Level1 = () => {
                 scrollbar={{ draggable: true }}
             >
                 <SwiperSlide>
-                    <video controls width="95%">
+                    <video controls width="95%"
+                        onClick={() => Navigate("/Story1")}
+                        style={{ cursor: "pointer" }}
+                    >
                         <source
                             src="https://res.cloudinary.com/o7vbtffn/video/upload/v1783541942/Mia_Aan_Cat_yhwxvk.mp4"
                             type="video/mp4"
                         />
                     </video>
+
 
                 </SwiperSlide>
                 <SwiperSlide>
@@ -62,7 +68,11 @@ const Level1 = () => {
                     />
                 </SwiperSlide>
             </Swiper>
+           <button onClick={() => navigate("/Story1")}>
+            Go to Story
+            </button>
         </div>
+        
     )
 }
 
