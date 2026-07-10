@@ -6,7 +6,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const Story1 = () => {
+const Story = () => {
   const [selectedStory, setSelectedStory] = useState("");
   const [storyData, setStoryData] = useState(null);
 
@@ -102,4 +102,4 @@ const Story1 = () => {
   );
 };
 
-export default Story1;
+export default Story;
