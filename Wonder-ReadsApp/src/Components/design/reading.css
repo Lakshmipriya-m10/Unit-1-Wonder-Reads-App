@@ -27,6 +27,7 @@ body {
 
 .card-container:hover {
   transform: translateY(-20px);
+  transition: transform 0.3s, color 0.3s;  /* transfer changes smoothly */
 
 }
 

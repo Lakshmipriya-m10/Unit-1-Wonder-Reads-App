@@ -1,6 +1,6 @@
 import './App.css';
-import Navbar from './Components/Navbar';
-import Footer from './components/Footer';
+import Navbar from './Components/Navbar.jsx';
+import Footer from './components/Footer.jsx';
 
 import { Routes, Route } from 'react-router-dom';
 
@@ -11,7 +11,7 @@ import StoryForm from "./Components/pages/StoryForm.jsx";
 import MiniGames from "./Components/pages/MiniGames.jsx";
 import ReadingCards from './Components/pages/ReadingCard.jsx';
 import AllStories from './Components/pages/AllStories.jsx';
-import Story1 from './Components/pages/Story1.jsx';
+import Stories from './Components/pages/Stories.jsx'
 import Quiz from './Components/pages/Quiz.jsx';
 
 
@@ -29,7 +29,7 @@ function App() {
         <Route path="/StoryForm" element={<StoryForm />} />
         <Route path="/MiniGames" element={<MiniGames />} />
         <Route path="/AllStories" element={<AllStories />} />
-        <Route path="/Story1" element={<Story1 />} />
+        <Route path="/Stories" element={<Stories />} />
       </Routes>
        
       <Footer />
