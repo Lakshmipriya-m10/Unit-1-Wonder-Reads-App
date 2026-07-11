@@ -5,23 +5,47 @@ const Quiz = () => {
 
   const [selected1, setSelected1] = useState("");
   const [showResult, setShowResult] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [reward, setReward] = useState("");
 
   const handleSubmit = () => {
     setShowResult(true);
+    setIsSubmitted(true);
   };
+
+
+  const handleReward = () => {
+
+    if (!isSubmitted) {
+      alert("Please Submit quiz before checking reward.");
+      return;
+    }
+
+    if (selected1 === "Milk") {
+      setReward("Correct! You earned ⭐ 1 Star");
+    } else {
+      setReward("❌ No reward. Try again!");
+    }
+  };
+
 
   const handleRestart = () => {
     setSelected1("");
     setShowResult(false);
+    setIsSubmitted(false);
+    setReward("");
   };
+
 
   return (
     <div>
+
       <h1 className="card">Quiz</h1>
 
       <h3 className="card">
         1. What did Mia give to the cat?
       </h3>
+
 
       <div className="card">
 
@@ -35,6 +59,7 @@ const Quiz = () => {
           <label> Water</label>
         </div>
 
+
         <div>
           <input
             type="radio"
@@ -45,6 +70,7 @@ const Quiz = () => {
           <label> Milk</label>
         </div>
 
+
         <div>
           <input
             type="radio"
@@ -54,6 +80,7 @@ const Quiz = () => {
           />
           <label> Bread</label>
         </div>
+
 
         <div>
           <input
@@ -68,6 +95,7 @@ const Quiz = () => {
       </div>
 
 
+
       {showResult && (
         <div className="card">
           <p>
@@ -75,6 +103,15 @@ const Quiz = () => {
           </p>
         </div>
       )}
+
+
+
+      {reward && (
+        <div className="card" style={{ color: "yellow" }}>
+          <h4>{reward}</h4>
+        </div>
+      )}
+
 
 
       <section>
@@ -90,16 +127,17 @@ const Quiz = () => {
           Restart
         </button>
 
-
         <button
           className="button"
           style={{
             marginLeft: "50px",
             background: "#234b91",
           }}
+          onClick={handleReward}
         >
-          Reward
+          Reward 
         </button>
+
 
 
         <button
@@ -112,6 +150,7 @@ const Quiz = () => {
         >
           Submit
         </button>
+
 
       </section>
 
