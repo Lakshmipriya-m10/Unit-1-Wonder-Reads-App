@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import stories from "../data/stories";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -10,17 +10,22 @@ const Story = () => {
   const [selectedStory, setSelectedStory] = useState("");
   const [storyData, setStoryData] = useState(null);
 
-  const handleStoryChange = (e) => {
-    const storyId = e.target.value;
+  // Stop current audio when story changes
+useEffect(() => {
+  window.speechSynthesis.cancel();
+}, [selectedStory]);
+
+  const handleStoryChange = (event) => {
+    const storyId = event.target.value;
     setSelectedStory(storyId);
 
-    const story = stories.find((s) => s.id === storyId);
+    const story = stories.find((story) => story.id === storyId);
     setStoryData(story);
   };
 
   const readStory = () => {
     if (!storyData) return;
-     const cleanText = storyData.text.replace(/[.,!?;:]/g, "");
+    const cleanText = storyData.text.replace(/[.,!?;:]/g, "");
 
     const speech = new SpeechSynthesisUtterance(storyData.text);
     speech.rate = 0.5;
@@ -35,19 +40,19 @@ const Story = () => {
     window.speechSynthesis.cancel();
   };
 
-    const pauseReading = () => {
+  const pauseReading = () => {
     window.speechSynthesis.pause();
   };
   const resumeReading = () => {
-  window.speechSynthesis.resume();
-};
+    window.speechSynthesis.resume();
+  };
   return (
     <div className="story-page" style={{
-    backgroundImage: "url('https://res.cloudinary.com/o7vbtffn/image/upload/v1783625039/book2_bxweas.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    minHeight: "100vh"
-  }}>
+      backgroundImage: "url('https://res.cloudinary.com/o7vbtffn/image/upload/v1783625039/book2_bxweas.jpg')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      minHeight: "100vh"
+    }}>
       <h2>Select a Story</h2>
 
       <select value={selectedStory} onChange={handleStoryChange}>
@@ -62,40 +67,41 @@ const Story = () => {
 
       {storyData && (
         <div className="story-content" >
-         <Swiper
-      modules={[Pagination]}
-      pagination={{ clickable: true }}
-      slidesPerView={1}
-    >
-      {storyData.images.map((img, index) => (
-        <SwiperSlide key={index}>
-          <img
-            src={img}
-            alt={storyData.title}
-            width="65%"
-          />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+          <Swiper
+            modules={[Navigation, Pagination]}
+            pagination={{ clickable: true }}
+            navigation
+            slidesPerView={1}
+          >
+            {storyData.images.map((img, index) => (
+              <SwiperSlide key={index}>
+                <img
+                  src={img}
+                  alt={storyData.title}
+                  width="100%"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
           <h2>{storyData.title}</h2>
           <p>{storyData.text}</p>
           <div className="button-group">
-          <button className="button" onClick={readStory}>
-            🔊 Read Story
-          </button>
+            <button className="button" onClick={readStory}>
+              🔊 Read Story
+            </button>
 
-          <button className="button" onClick={stopReading}>
-            Stop
-          </button>
+            <button className="button" onClick={stopReading}>
+              Stop
+            </button>
 
-          <button className="button" onClick={pauseReading}>
-            Pause
-          </button>
+            <button className="button" onClick={pauseReading}>
+              Pause
+            </button>
 
-           <button className="button" onClick={resumeReading}>
-            Resume
-          </button>
-           </div>
+            <button className="button" onClick={resumeReading}>
+              Resume
+            </button>
+          </div>
         </div>
       )}
     </div>
