@@ -3,7 +3,7 @@ import React from 'react';
 const MiniGames = () => {
   return (
     <div>
-      <h2>MiniGames</h2>
+      <h2 className='card'>MiniGames</h2>
     </div>
   )
 }
