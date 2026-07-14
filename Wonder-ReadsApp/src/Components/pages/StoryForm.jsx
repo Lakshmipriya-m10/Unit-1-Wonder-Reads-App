@@ -1,5 +1,7 @@
-import React, { useState } from "react";
-import '../design/storyform.css'
+import React, { useRef, useState } from "react";
+import '../design/storyform.css';
+import Button from '../pages/Button.jsx';
+import '../design/button.css'
 
 const CreateStory = () => {
   const [formData, setFormData] = useState({
@@ -8,18 +10,49 @@ const CreateStory = () => {
     contact: "",
     story: ""
   });
-  const handleChange = (e) => {
+
+  const [dialogMessage, setDialogMessage] = useState("");
+
+  const dialogRef = useRef();
+
+  const openDialog = (message) => {
+    setDialogMessage(message);
+    dialogRef.current.showModal();
+  };
+
+  const closeDialog = () => {
+    dialogRef.current.close();
+  };
+
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    // Contact number validation
+    if (name === "contact") {
+      if (!/^\d*$/.test(value) || value.length > 10) {
+        return;
+      }
+    }
+
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  //submit
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    if (formData.contact.length !== 10) {
+      openDialog("Contact number must be exactly 10 digits.");
+      return;
+    }
+
     console.log(formData);
 
-    alert("Story submitted successfully!");
+    openDialog("Your Story submitted successfully!");
 
     setFormData({
       name: "",
@@ -29,12 +62,27 @@ const CreateStory = () => {
     });
   };
 
+  const handleEdit = () => {
+    openDialog("Edit feature is coming soon!");
+  };
+
+  const handleDelete = () => {
+    setFormData({
+      name: "",
+      email: "",
+      contact: "",
+      story: ""
+    });
+
+    openDialog("All fields deleted successfully!");
+  };
 
   return (
     <div className="story-form-container">
 
       <h1>Create Your Story</h1>
       <form onSubmit={handleSubmit}>
+
         <label>Name</label>
         <input
           type="text"
@@ -54,15 +102,18 @@ const CreateStory = () => {
           placeholder="Enter your email"
           required
         />
+
         <label>Contact Number</label>
         <input
           type="tel"
           name="contact"
           value={formData.contact}
           onChange={handleChange}
-          placeholder="Enter contact number"
+          placeholder="Enter 10 digit contact number"
+          maxLength="10"
           required
         />
+
         <label>Write Your Story</label>
         <textarea
           name="story"
@@ -73,16 +124,54 @@ const CreateStory = () => {
           maxLength={500}
           required
         />
+
         <p className="char-count">
-            Characters: {formData.story.length}/500
+          Characters: {formData.story.length}/500
         </p>
-        <button type="submit">
+
+        <Button
+          type="submit"
+          className="bounce-btn"
+          background="linear-gradient(135deg, #ff007a, #ffce00)"
+        >
           Submit Story
-        </button>
+        </Button>
+        <Button
+          type="button"
+          onClick={handleEdit}
+          background="#8377d1"
+        >
+          Edit
+        </Button>
+        <Button
+          type="button"
+          onClick={handleDelete}
+          background="#3e6fba"
+        >
+          Delete
+        </Button>
+
       </form>
+      
+      {/* React dialog popup  */}
+    
+      <dialog ref={dialogRef} className="story-dialog">
+
+        <h2>Message</h2>
+
+        <p>{dialogMessage}</p>
+
+        <Button
+          type="button"
+          onClick={closeDialog}
+          background="#333"
+        >
+          OK
+        </Button>
+      </dialog>
+
     </div>
   );
 };
 
 export default CreateStory;
-
