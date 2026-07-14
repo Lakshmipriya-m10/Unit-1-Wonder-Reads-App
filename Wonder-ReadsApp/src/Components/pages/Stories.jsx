@@ -25,11 +25,13 @@ const Story = () => {
 
   const readStory = () => {
     if (!storyData) return;
-    const cleanText = storyData.text.replace(/[.,!?;:]/g, "");
+    // Create a new speech object using the cleaned story text.
+   // SpeechSynthesisUtterance converts text into spoken audio using the browser's TTS (Text-to-Speech) API.
+    const cleanText = storyData.text.replace(/[,!?;:]/g, "");
 
-    const speech = new SpeechSynthesisUtterance(storyData.text);
+    const speech = new SpeechSynthesisUtterance(cleanText);
     speech.rate = 0.5;
-    speech.pitch = 1;
+    speech.pitch = 1;    
     speech.lang = "en-US";
 
     window.speechSynthesis.cancel();
@@ -47,7 +49,7 @@ const Story = () => {
     window.speechSynthesis.resume();
   };
   return (
-    <div className="story-page" style={{
+    <div style={{
       backgroundImage: "url('https://res.cloudinary.com/o7vbtffn/image/upload/v1783625039/book2_bxweas.jpg')",
       backgroundSize: "cover",
       backgroundPosition: "center",
@@ -66,7 +68,7 @@ const Story = () => {
       </select>
 
       {storyData && (
-        <div className="story-content" >
+        <div >
           <Swiper
             modules={[Navigation, Pagination]}
             pagination={{ clickable: true }}
@@ -108,4 +110,4 @@ const Story = () => {
   );
 };
 
-export default Story;
+export default Story;                                                  
