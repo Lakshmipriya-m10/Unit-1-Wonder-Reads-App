@@ -1,6 +1,6 @@
 import './App.css';
-import Navbar from './Components/pages/Navbar.jsx';
-import Footer from './Components/pages/Footer.jsx';
+import Navbar from './Components/Navbar.jsx';
+import Footer from './Components/Footer.jsx';
 
 import { Routes, Route } from 'react-router-dom';
 
@@ -20,20 +20,20 @@ function App() {
   return (
     <div className="container">
       <Navbar />
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Reading" element={<ReadingCards />} />
-        <Route path="/Quiz" element={<Quiz />} />
-        <Route path="/StoryForm" element={<StoryForm />} />
-        <Route path="/MiniGames" element={<MiniGames />} />
-        <Route path="/AllStories" element={<AllStories />} />
-        <Route path="/Stories" element={<Stories />} />
-      </Routes>
-       
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Reading" element={<ReadingCards />} />
+          <Route path="/Quiz" element={<Quiz />} />
+          <Route path="/StoryForm" element={<StoryForm />} />
+          <Route path="/MiniGames" element={<MiniGames />} />
+          <Route path="/AllStories" element={<AllStories />} />
+          <Route path="/Stories" element={<Stories />} />
+        </Routes>
+      </main>
       <Footer />
-    
+
     </div>
   );
 }

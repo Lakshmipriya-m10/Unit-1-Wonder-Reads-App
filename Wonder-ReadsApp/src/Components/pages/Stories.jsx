@@ -11,9 +11,9 @@ const Story = () => {
   const [storyData, setStoryData] = useState(null);
 
   // Stop current audio when story changes
-useEffect(() => {
-  window.speechSynthesis.cancel();
-}, [selectedStory]);
+  useEffect(() => {
+    window.speechSynthesis.cancel();
+  }, [selectedStory]);
 
   const handleStoryChange = (event) => {
     const storyId = event.target.value;

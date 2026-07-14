@@ -38,7 +38,6 @@ const AllStories = () => {
                         />
                     </video>
 
-
                 </SwiperSlide>
                 <SwiperSlide>
                     <img
