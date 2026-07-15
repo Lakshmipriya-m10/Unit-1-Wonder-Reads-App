@@ -1,11 +1,66 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../design/minigames.css";
+import Header from"./Header.jsx";
+import MemoryFlip from "./MemoryFlip.jsx";
 
-const MiniGames = () => {
+const GameTable = () => {
+
+  const games = [
+     {
+      id: 1,
+      icon: "🧠",
+      name: "Memory Flip",
+      description: "Match the cards",
+      path: "/MemoryFlip"
+    },
+    {
+      id: 2,
+      icon: "🦋",
+      name: "Butterfly Catch",
+      description: "Catch flying butterflies",
+      path: "/butterfly-game"
+    },
+    {
+      id: 3,
+      icon: "🍎",
+      name: "Fruit Slice",
+      description: "Slice fruits and earn points",
+      path: "/fruit-slice"
+    }
+  ];
+
   return (
     <div>
-      <h2 className='card'>MiniGames</h2>
-    </div>
-  )
-}
+      <Header title= "🎮 Choose a Game" />
+      <table>
+        <tbody>
+        {
+          games.map((game)=>(
+            <tr key={game.id}>
+              <td className="game-icon">
+                {game.icon}
+              </td>
 
-export default MiniGames;
+              <td>
+                <h3>{game.name}</h3>
+                <p>{game.description}</p>
+              </td>
+
+              <td className="game-link">
+                <Link 
+                  to={game.path}
+                >
+                  Play
+                </Link>
+              </td>
+            </tr>
+          ))
+        }
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default GameTable;
