@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../design/minigames.css";
 import Header from"./Header.jsx";
 import MemoryFlip from "./MemoryFlip.jsx";
+import ButterflyGame from "../pages/ButterflyGame.jsx"
 
 const GameTable = () => {
 
@@ -10,7 +11,7 @@ const GameTable = () => {
      {
       id: 1,
       icon: "🧠",
-      name: "Memory Flip",
+      name: "Pokémon Memory Flip",
       description: "Match the cards",
       path: "/MemoryFlip"
     },
@@ -19,14 +20,14 @@ const GameTable = () => {
       icon: "🦋",
       name: "Butterfly Catch",
       description: "Catch flying butterflies",
-      path: "/butterfly-game"
+      path: "/ButterflyGame"
     },
     {
       id: 3,
       icon: "🍎",
       name: "Fruit Slice",
       description: "Slice fruits and earn points",
-      path: "/fruit-slice"
+      path: "/FruitSlice"
     }
   ];
 

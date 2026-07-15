@@ -14,6 +14,8 @@ import AllStories from './Components/pages/AllStories.jsx';
 import Stories from './Components/pages/Stories.jsx'
 import Quiz from './Components/pages/Quiz.jsx';
 import MemoryFlip from './Components/pages/MemoryFlip.jsx';
+import ButterflyGame from './Components/pages/ButterflyGame.jsx';
+import FruitSlice from './Components/pages/FruitSlice.jsx';
 
 
 
@@ -32,6 +34,8 @@ function App() {
           <Route path="/AllStories" element={<AllStories />} />
           <Route path="/Stories" element={<Stories />} />
           <Route path="/MemoryFlip" element={<MemoryFlip />} />
+          <Route path="/ButterflyGame" element={<ButterflyGame />} />
+          <Route path="/FruitSlice" element={<FruitSlice />} />
           
         </Routes>
       </main>
