@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import Header from "../pages/Header.jsx";
+import '../design/header.css';
 import { useNavigate } from "react-router-dom";
 // import Swiper core and required modules
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,7 +16,7 @@ const AllStories = () => {
     const navigate = useNavigate();
     return (
         <div>
-            <h2 className='card' >Stories</h2>
+            <Header title="Stories" />
             <Swiper
                 // install Swiper modules
                 modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
