@@ -12,6 +12,8 @@ const MemoryFlip = () => {
     const [firstCard, setFirstCard] = useState(null);
     const [secondCard, setSecondCard] = useState(null);
     const [lockBoard, setLockBoard] = useState(false);
+    const [score, setScore] = useState(0);
+    const [win, setWin] = useState(false);
 
     const backImage =
         "https://res.cloudinary.com/o7vbtffn/image/upload/v1784137975/pm-f_xdfyov.jpg";
@@ -88,6 +90,13 @@ const MemoryFlip = () => {
 
     const checkMatch = (card1, card2) => {
         if (card1.name === card2.name) {
+            const newScore = score + 1;
+
+            setScore(newScore);
+
+            if (newScore === 3) {
+                setWin(true);
+            }
             // Cards match
             setFirstCard(null);
             setSecondCard(null);
@@ -115,7 +124,13 @@ const MemoryFlip = () => {
 
     return (
         <div>
-            <Header title="Pokémon Flip Game" />
+            <Header title="Pokémon Memory Flip Game" />
+            <h3 className='card'>Matches : {score} </h3>
+            {win && (
+                <h2 className='card'>
+                     🏆 Congratulations! You Found All Pokémon Pairs!  🏆
+                </h2>
+            )}
             <div className="card-align">
                 <div className="card-grid">
                     {cards.map(card => (
@@ -138,7 +153,7 @@ const MemoryFlip = () => {
                                     />
                                 </div>
                             </div>
-                       </div>
+                        </div>
                     ))}
                 </div>
             </div>
