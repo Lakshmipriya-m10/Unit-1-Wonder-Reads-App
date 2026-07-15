@@ -5,6 +5,9 @@ import '../design/memoryflip.css';
 
 const MemoryFlip = () => {
 
+const [firstCard,setFirstCard] = useState(null);
+const [secondCard,setSecondCard] = useState(null);
+
     const backImage =
         "https://res.cloudinary.com/o7vbtffn/image/upload/v1784137975/pm-f_xdfyov.jpg";
 
@@ -14,18 +17,33 @@ const MemoryFlip = () => {
             name: "Pikachu",
             image: "https://res.cloudinary.com/o7vbtffn/image/upload/v1784137975/pm2_vqdrp0.png"
         },
-        {
+         {
             id: 2,
+            name: "Pikachu",
+            image: "https://res.cloudinary.com/o7vbtffn/image/upload/v1784137975/pm2_vqdrp0.png"
+        },
+        {
+            id: 3,
             name: "Charizard",
             image: "https://res.cloudinary.com/o7vbtffn/image/upload/v1784137976/pm5_ya4rhb.png"
         },
         {
-            id: 3,
+            id: 4,
+            name: "Charizard",
+            image: "https://res.cloudinary.com/o7vbtffn/image/upload/v1784137976/pm5_ya4rhb.png"
+        },
+        {
+            id: 5,
+            name: "Bulbasaur",
+            image: "https://res.cloudinary.com/o7vbtffn/image/upload/v1784137976/bul_c3vwqx.png"
+        },
+         {
+            id: 6,
             name: "Bulbasaur",
             image: "https://res.cloudinary.com/o7vbtffn/image/upload/v1784137976/bul_c3vwqx.png"
         }
     ];
-
+    
     const [cards, setCards] = useState(
         pokemonCards.map(card => ({
             ...card,
@@ -42,11 +60,18 @@ const MemoryFlip = () => {
             )
         );
     };
+
+    const shuffleCards = (cards) => {
+  return [...cards].sort(() => Math.random() - 0.5);
+};
+
+
     return (
         <div>
             <Header title="Pokémon Flip Game" />
             <div className="card-align">
                 <div className="card-grid">
+                    
                     {cards.map(card => (
                         <div
                             key={card.id}
