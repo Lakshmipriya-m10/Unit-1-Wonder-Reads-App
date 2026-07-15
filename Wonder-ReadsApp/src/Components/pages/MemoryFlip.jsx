@@ -3,10 +3,15 @@ import Header from '../pages/Header.jsx';
 import '../design/header.css';
 import '../design/memoryflip.css';
 
+
+const shuffleCards = (cards) => {
+    return [...cards].sort(() => Math.random() - 0.5);
+};
+
 const MemoryFlip = () => {
 
-const [firstCard,setFirstCard] = useState(null);
-const [secondCard,setSecondCard] = useState(null);
+    const [firstCard, setFirstCard] = useState(null);
+    const [secondCard, setSecondCard] = useState(null);
 
     const backImage =
         "https://res.cloudinary.com/o7vbtffn/image/upload/v1784137975/pm-f_xdfyov.jpg";
@@ -17,7 +22,7 @@ const [secondCard,setSecondCard] = useState(null);
             name: "Pikachu",
             image: "https://res.cloudinary.com/o7vbtffn/image/upload/v1784137975/pm2_vqdrp0.png"
         },
-         {
+        {
             id: 2,
             name: "Pikachu",
             image: "https://res.cloudinary.com/o7vbtffn/image/upload/v1784137975/pm2_vqdrp0.png"
@@ -37,19 +42,23 @@ const [secondCard,setSecondCard] = useState(null);
             name: "Bulbasaur",
             image: "https://res.cloudinary.com/o7vbtffn/image/upload/v1784137976/bul_c3vwqx.png"
         },
-         {
+        {
             id: 6,
             name: "Bulbasaur",
             image: "https://res.cloudinary.com/o7vbtffn/image/upload/v1784137976/bul_c3vwqx.png"
         }
     ];
-    
-    const [cards, setCards] = useState(
+
+
+const [cards, setCards] = useState(
+    shuffleCards(
         pokemonCards.map(card => ({
             ...card,
             flipped: false
         }))
-    );
+    )
+);
+
 
     const flipCard = (id) => {
         setCards(
@@ -61,23 +70,21 @@ const [secondCard,setSecondCard] = useState(null);
         );
     };
 
-    const shuffleCards = (cards) => {
-  return [...cards].sort(() => Math.random() - 0.5);
-};
-
 
     return (
         <div>
             <Header title="Pokémon Flip Game" />
             <div className="card-align">
                 <div className="card-grid">
-                    
+
                     {cards.map(card => (
                         <div
                             key={card.id}
                             className={`memory-card ${card.flipped ? "flip" : ""}`}
                             onClick={() => flipCard(card.id)}
                         >
+
+
                             <div className="card-inner">
                                 {/* Back Image (hidden initially) */}
                                 <div className="card-back-image">
