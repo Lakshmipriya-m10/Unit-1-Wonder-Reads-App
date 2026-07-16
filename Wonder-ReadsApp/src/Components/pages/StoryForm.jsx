@@ -122,12 +122,12 @@ const CreateStory = () => {
           onChange={handleChange}
           placeholder="Write your story here..."
           rows="8"
-          maxLength={500}
+          maxLength={800}
           required
         />
 
         <p className="char-count">
-          Characters: {formData.story.length}/500
+          Characters: {formData.story.length}/800
         </p>
 
         <Button
