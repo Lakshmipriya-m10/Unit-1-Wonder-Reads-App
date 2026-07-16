@@ -55,7 +55,7 @@ const AllStories = () => {
                         src="https://res.cloudinary.com/o7vbtffn/image/upload/v1783544313/Your_paragraph_text_um7yay.jpg"
                         alt="Story-3"
                         onClick={() => navigate("/Stories")}
-                        style={{ width: "100%" }}
+                        style={{ width: "100%",  cursor: "pointer" }}
                     />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -63,7 +63,7 @@ const AllStories = () => {
                         src="https://res.cloudinary.com/o7vbtffn/image/upload/v1783544664/The_Rainy_School_Day_nazkoi.jpg"
                         alt="Story-4"
                         onClick={() => navigate("/Stories")}
-                        style={{ width: "100%" }}
+                        style={{ width: "100%",  cursor: "pointer"  }}
                     />
                 </SwiperSlide>
                 <SwiperSlide>
@@ -71,7 +71,7 @@ const AllStories = () => {
                         src="https://res.cloudinary.com/o7vbtffn/image/upload/v1783544771/The_Garden_Surprise_dcjd2s.jpg"
                         alt="Story-5"
                         onClick={() => navigate("/Stories")}
-                        style={{ width: "100%" }}
+                        style={{ width: "100%",  cursor: "pointer"  }}
                     />
                 </SwiperSlide>
             </Swiper>
