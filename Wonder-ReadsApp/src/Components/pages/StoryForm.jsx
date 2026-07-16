@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react";
 import '../design/storyform.css';
 import Button from '../pages/Button.jsx';
-import '../design/button.css'
+import '../design/button.css';
+
 
 const CreateStory = () => {
   const [formData, setFormData] = useState({
@@ -152,9 +153,9 @@ const CreateStory = () => {
         </Button>
 
       </form>
-      
+
       {/* React dialog popup  */}
-    
+
       <dialog ref={dialogRef} className="story-dialog">
 
         <h2>Message</h2>

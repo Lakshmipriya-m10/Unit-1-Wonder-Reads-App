@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import stories from "../data/stories";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/pagination";
+
 
 const Story = () => {
   const [selectedStory, setSelectedStory] = useState("");

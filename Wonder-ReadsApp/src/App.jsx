@@ -17,8 +17,6 @@ import MemoryFlip from './Components/pages/MemoryFlip.jsx';
 import ButterflyGame from './Components/pages/ButterflyGame.jsx';
 import FruitSlice from './Components/pages/FruitSlice.jsx';
 
-
-
 function App() {
   return (
     <div className="container">

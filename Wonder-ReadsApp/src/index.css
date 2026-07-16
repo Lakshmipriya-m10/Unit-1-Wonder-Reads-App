@@ -1,28 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@400;500;600&family=Comic+Neue:wght@400;700&display=swap');
 
-/*Style for all components */
-*{
+/* Global Reset */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Comic Neue", cursive;
-}
-/* change cursor point */
-button {
-  cursor: pointer;
 }
 
-h1, h2, h3 {
-  font-family: "Cinzel", serif;
-  font-weight: 700;
-  color: #618ee1;
-}
-.app {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
+/* Global Style */
 body {
   font-family: "Poppins", sans-serif;
   background-color: #fff8e7;
@@ -30,7 +15,21 @@ body {
   line-height: 1.6;
 }
 
-/* using clamp() for header */
+/* App Layout */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  color: #618ee1;
+}
 
 h1 {
   font-size: clamp(2rem, 5vw, 4rem);
@@ -43,42 +42,44 @@ h2 {
 h3 {
   font-size: clamp(1.2rem, 3vw, 2rem);
 }
-/*   FLEXBOX / LAYOUT HELPERS */
+
+/* Buttons */
+button {
+  cursor: pointer;
+}
+
+/* Layout Container */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-
 }
 
-/* Common flex layout */
+/* Flex Helper */
 .flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Common grid layout */
+/* Grid Helper */
 .grid-layout {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
+
 /* Tablet */
-
 @media (max-width: 768px) {
-
   .grid-layout {
     grid-template-columns: repeat(2, 1fr);
   }
-
 }
 
+
 /* Mobile */
-
 @media (max-width: 480px) {
-
   .grid-layout {
     grid-template-columns: 1fr;
   }
@@ -86,5 +87,4 @@ h3 {
   .container {
     width: 95%;
   }
-
 }

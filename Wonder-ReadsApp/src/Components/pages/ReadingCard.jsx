@@ -2,7 +2,6 @@ import Reading from "../pages/Reading.jsx";
 import React from 'react';
 import readingLevels from "../data/readingData.js";
 
-
 const ReadingCards = () => {
   return (
     <div className="reading-container">

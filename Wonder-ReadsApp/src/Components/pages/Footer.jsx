@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram,  faYoutube } from "@fortawesome/free-brands-svg-icons";
 import '../design/footer.css';
 
-
 const Footer = () => {
     return (
         <div>
