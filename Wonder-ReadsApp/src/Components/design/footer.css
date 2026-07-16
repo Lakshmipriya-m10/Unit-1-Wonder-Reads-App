@@ -4,7 +4,6 @@
   padding: 10px;
   margin-top: auto;
   text-align: center;
-
 }
 
 .social-icons {
@@ -12,10 +11,11 @@
 }
 
 .social-icons a {
+  display: inline-block;
   color: white;
   font-size: 30px;
   margin: 5px;
-
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icons a:hover {

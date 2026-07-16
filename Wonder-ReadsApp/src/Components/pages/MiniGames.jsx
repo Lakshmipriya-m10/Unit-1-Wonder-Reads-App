@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import "../design/minigames.css";
 import Header from"./Header.jsx";
 import MemoryFlip from "./MemoryFlip.jsx";
-import ButterflyGame from "../pages/ButterflyGame.jsx"
+import ButterflyGame from "../pages/ButterflyGame.jsx";
+
 
 const GameTable = () => {
 
@@ -33,7 +34,7 @@ const GameTable = () => {
 
   return (
     <div>
-      <Header title= "🎮 Choose a Game" />
+      <Header className="card" title= "🎮 Choose a Game" />
       <table>
         <tbody>
         {
