@@ -1,0 +1,4 @@
+[build]
+    base = "Wonder-ReadsApp"
+    command = "npm run build"
+    publish = "dist"
