@@ -60,7 +60,7 @@ Users can explore stories based on reading levels, read interactive content, ans
 
 View the deployed application here:
 
-[Coming Soon]
+[(https://wonder-reads.netlify.app/)]
 
 ---
 
