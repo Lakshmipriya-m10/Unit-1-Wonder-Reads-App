@@ -12,7 +12,9 @@ const Story = () => {
 
   // Stop current audio when story changes
   useEffect(() => {
+    return() =>{
     window.speechSynthesis.cancel();
+   };
   }, [selectedStory]);
 
   const handleStoryChange = (event) => {
