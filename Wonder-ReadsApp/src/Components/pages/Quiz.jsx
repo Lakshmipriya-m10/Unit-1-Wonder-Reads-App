@@ -3,6 +3,14 @@ import '../design/quiz.css';
 import Button from '../pages/Button';
 import storyQuiz from "../data/storyquiz.js";
 
+import { test, expect } from "vitest";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+
+import { test, expect } from "vitest";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+
 const Quiz = () => {
 
   const [selectedStory, setSelectedStory] = useState("");

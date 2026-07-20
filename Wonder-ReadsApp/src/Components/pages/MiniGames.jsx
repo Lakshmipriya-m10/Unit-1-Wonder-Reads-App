@@ -5,6 +5,10 @@ import Header from"./Header.jsx";
 import MemoryFlip from "./MemoryFlip.jsx";
 import ButterflyGame from "../pages/ButterflyGame.jsx";
 
+import { test, expect } from "vitest";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+
 
 const GameTable = () => {
 

@@ -1,6 +1,10 @@
 import React from 'react';
 import '../design/home.css';
 
+import { test, expect } from "vitest";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+
 const Home = () => {
   return (
     <div className="home-page">

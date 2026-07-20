@@ -4,6 +4,10 @@ import '../design/navbar.css';
 import { NavLink } from "react-router-dom";
 import { useState } from 'react';
 
+import { test, expect } from "vitest";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+
 const Navbar = () => {
   const [hamburgerOpen, sethamburgerOpen] = useState(false);
   return (

@@ -1,9 +1,7 @@
 import './App.css';
 import Navbar from './Components/pages/Navbar.jsx';
 import Footer from './Components/pages/Footer.jsx';
-
 import { Routes, Route } from 'react-router-dom';
-
 import Home from "./Components/pages/Home.jsx";
 import About from "./Components/pages/About.jsx";
 import Reading from "./Components/pages/Reading.jsx";

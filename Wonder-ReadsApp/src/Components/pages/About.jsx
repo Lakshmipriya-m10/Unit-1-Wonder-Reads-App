@@ -4,6 +4,10 @@ import '../design/header.css';
 import '../design/about.css';
 import React, { useState } from "react";
 
+import { test, expect } from "vitest";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+
 
 const About = () => {
 

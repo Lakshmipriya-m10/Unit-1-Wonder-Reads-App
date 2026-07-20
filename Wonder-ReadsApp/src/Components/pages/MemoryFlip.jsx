@@ -3,6 +3,10 @@ import Header from '../pages/Header.jsx';
 import '../design/header.css';
 import '../design/memoryflip.css';
 
+import { test, expect } from "vitest";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+
 const shuffleCards = (cards) => {
     return [...cards].sort(() => Math.random() - 0.5);
 };
